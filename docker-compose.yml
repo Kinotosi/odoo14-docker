@@ -1,6 +1,6 @@
 version: '3.1'
 services:
-  web:
+  web_odoo14:
     image: odoo:14.0
     container_name: web_odoo14
     ports:
@@ -14,8 +14,8 @@ services:
       - USER=${user}
       - PASSWORD=${pass}
     depends_on:
-      - db
-  db:
+      - db_odoo14
+  db_odoo14:
     image: postgres:13-alpine
     container_name: db_odoo14
     environment:
